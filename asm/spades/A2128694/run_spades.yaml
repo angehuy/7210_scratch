@@ -1,0 +1,109 @@
+- STAGE: Before start
+  args: []
+  config_dir: ''
+  del_after: []
+  output_files: []
+  path: 'true'
+  short_name: before_start
+- STAGE: Assembling
+  args: []
+  config_dir: ''
+  del_after: []
+  output_files: []
+  path: 'true'
+  short_name: as_start
+- STAGE: K21
+  args:
+  - /Users/ahuynh/Downloads/7210_assignment1/asm/spades/A2128694/K21/configs/config.info
+  - /Users/ahuynh/Downloads/7210_assignment1/asm/spades/A2128694/K21/configs/isolate_mode.info
+  config_dir: K21
+  del_after: []
+  output_files: []
+  path: /Users/ahuynh/miniforge3/envs/7210_test/bin/spades-core
+  short_name: k21
+- STAGE: K33
+  args:
+  - /Users/ahuynh/Downloads/7210_assignment1/asm/spades/A2128694/K33/configs/config.info
+  - /Users/ahuynh/Downloads/7210_assignment1/asm/spades/A2128694/K33/configs/isolate_mode.info
+  config_dir: K33
+  del_after: []
+  output_files: []
+  path: /Users/ahuynh/miniforge3/envs/7210_test/bin/spades-core
+  short_name: k33
+- STAGE: K55
+  args:
+  - /Users/ahuynh/Downloads/7210_assignment1/asm/spades/A2128694/K55/configs/config.info
+  - /Users/ahuynh/Downloads/7210_assignment1/asm/spades/A2128694/K55/configs/isolate_mode.info
+  config_dir: K55
+  del_after: []
+  output_files: []
+  path: /Users/ahuynh/miniforge3/envs/7210_test/bin/spades-core
+  short_name: k55
+- STAGE: K77
+  args:
+  - /Users/ahuynh/Downloads/7210_assignment1/asm/spades/A2128694/K77/configs/config.info
+  - /Users/ahuynh/Downloads/7210_assignment1/asm/spades/A2128694/K77/configs/isolate_mode.info
+  config_dir: K77
+  del_after: []
+  output_files: []
+  path: /Users/ahuynh/miniforge3/envs/7210_test/bin/spades-core
+  short_name: k77
+- STAGE: Copy files
+  args:
+  - /Users/ahuynh/miniforge3/envs/7210_test/share/spades/spades_pipeline/scripts/copy_files.py
+  - /Users/ahuynh/Downloads/7210_assignment1/asm/spades/A2128694/K77/before_rr.fasta
+  - /Users/ahuynh/Downloads/7210_assignment1/asm/spades/A2128694/before_rr.fasta
+  - /Users/ahuynh/Downloads/7210_assignment1/asm/spades/A2128694/K77/assembly_graph_after_simplification.gfa
+  - /Users/ahuynh/Downloads/7210_assignment1/asm/spades/A2128694/assembly_graph_after_simplification.gfa
+  - /Users/ahuynh/Downloads/7210_assignment1/asm/spades/A2128694/K77/final_contigs.fasta
+  - /Users/ahuynh/Downloads/7210_assignment1/asm/spades/A2128694/contigs.fasta
+  - /Users/ahuynh/Downloads/7210_assignment1/asm/spades/A2128694/K77/first_pe_contigs.fasta
+  - /Users/ahuynh/Downloads/7210_assignment1/asm/spades/A2128694/first_pe_contigs.fasta
+  - /Users/ahuynh/Downloads/7210_assignment1/asm/spades/A2128694/K77/strain_graph.gfa
+  - /Users/ahuynh/Downloads/7210_assignment1/asm/spades/A2128694/strain_graph.gfa
+  - /Users/ahuynh/Downloads/7210_assignment1/asm/spades/A2128694/K77/scaffolds.fasta
+  - /Users/ahuynh/Downloads/7210_assignment1/asm/spades/A2128694/scaffolds.fasta
+  - /Users/ahuynh/Downloads/7210_assignment1/asm/spades/A2128694/K77/scaffolds.paths
+  - /Users/ahuynh/Downloads/7210_assignment1/asm/spades/A2128694/scaffolds.paths
+  - /Users/ahuynh/Downloads/7210_assignment1/asm/spades/A2128694/K77/assembly_graph_with_scaffolds.gfa
+  - /Users/ahuynh/Downloads/7210_assignment1/asm/spades/A2128694/assembly_graph_with_scaffolds.gfa
+  - /Users/ahuynh/Downloads/7210_assignment1/asm/spades/A2128694/K77/assembly_graph.fastg
+  - /Users/ahuynh/Downloads/7210_assignment1/asm/spades/A2128694/assembly_graph.fastg
+  - /Users/ahuynh/Downloads/7210_assignment1/asm/spades/A2128694/K77/final_contigs.paths
+  - /Users/ahuynh/Downloads/7210_assignment1/asm/spades/A2128694/contigs.paths
+  config_dir: ''
+  del_after:
+  - .bin_reads
+  - tmp/spades_1c0a56c6
+  output_files: []
+  path: /Users/ahuynh/miniforge3/envs/7210_test/bin/python3
+  short_name: copy_files
+- STAGE: Assembling
+  args: []
+  config_dir: ''
+  del_after: []
+  output_files: []
+  path: 'true'
+  short_name: as_finish
+- STAGE: Breaking scaffolds
+  args:
+  - /Users/ahuynh/miniforge3/envs/7210_test/share/spades/spades_pipeline/scripts/breaking_scaffolds_script.py
+  - --result_scaffolds_filename
+  - /Users/ahuynh/Downloads/7210_assignment1/asm/spades/A2128694/scaffolds.fasta
+  - --misc_dir
+  - /Users/ahuynh/Downloads/7210_assignment1/asm/spades/A2128694/misc
+  - --threshold_for_breaking_scaffolds
+  - '3'
+  config_dir: ''
+  del_after: []
+  output_files: []
+  path: /Users/ahuynh/miniforge3/envs/7210_test/bin/python3
+  short_name: bs
+- STAGE: Terminate
+  args: []
+  config_dir: ''
+  del_after:
+  - configs
+  output_files: []
+  path: 'true'
+  short_name: terminate

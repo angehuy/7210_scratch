@@ -1,0 +1,9 @@
+- "left reads":
+  - "/Users/ahuynh/Downloads/7210_assignment1/trim/A2128694/r1.paired.fq.gz"
+  "number": !!int "1"
+  "orientation": "fr"
+  "right reads":
+  - "/Users/ahuynh/Downloads/7210_assignment1/trim/A2128694/r2.paired.fq.gz"
+  "single reads":
+  - "/Users/ahuynh/Downloads/7210_assignment1/trim/A2128694/singletons.fq.gz"
+  "type": "paired-end"

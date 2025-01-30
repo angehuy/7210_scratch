@@ -1,0 +1,73 @@
+
+
+== Warning ==  output dir is not empty! Please, clean output directory before run.
+
+
+Command line: /Users/ahuynh/miniforge3/envs/7210_test/bin/spades.py	-1	/Users/ahuynh/Downloads/7210_assignment1/trim/A2128696/r1.paired.fq.gz	-2	/Users/ahuynh/Downloads/7210_assignment1/trim/A2128696/r2.paired.fq.gz	-s	/Users/ahuynh/Downloads/7210_assignment1/trim/A2128696/singletons.fq.gz	-o	/Users/ahuynh/Downloads/7210_assignment1/asm/spades/A2128696	--isolate	
+
+System information:
+  SPAdes version: 3.15.2
+  Python version: 2.7.15
+  OS: Darwin-23.5.0-x86_64-i386-64bit
+
+Output dir: /Users/ahuynh/Downloads/7210_assignment1/asm/spades/A2128696
+Mode: ONLY assembling (without read error correction)
+Debug mode is turned OFF
+
+Dataset parameters:
+  Isolate mode
+  Reads:
+    Library number: 1, library type: paired-end
+      orientation: fr
+      left reads: ['/Users/ahuynh/Downloads/7210_assignment1/trim/A2128696/r1.paired.fq.gz']
+      right reads: ['/Users/ahuynh/Downloads/7210_assignment1/trim/A2128696/r2.paired.fq.gz']
+      interlaced reads: not specified
+      single reads: ['/Users/ahuynh/Downloads/7210_assignment1/trim/A2128696/singletons.fq.gz']
+      merged reads: not specified
+Assembly parameters:
+  k: automatic selection based on read length
+  Repeat resolution is enabled
+  Mismatch careful mode is turned OFF
+  MismatchCorrector will be SKIPPED
+  Coverage cutoff is turned OFF
+Other parameters:
+  Dir for temp files: /Users/ahuynh/Downloads/7210_assignment1/asm/spades/A2128696/tmp
+  Threads: 16
+  Memory limit (in Gb): 250
+
+
+======= SPAdes pipeline started. Log can be found here: /Users/ahuynh/Downloads/7210_assignment1/asm/spades/A2128696/spades.log
+
+/Users/ahuynh/Downloads/7210_assignment1/trim/A2128696/r2.paired.fq.gz: max reads length: 236
+/Users/ahuynh/Downloads/7210_assignment1/trim/A2128696/singletons.fq.gz: max reads length: 236
+/Users/ahuynh/Downloads/7210_assignment1/trim/A2128696/r1.paired.fq.gz: max reads length: 236
+
+Reads length: 236
+
+Default k-mer sizes were set to [21, 33, 55, 77] because estimated read length (236) is equal to or greater than 150
+
+===== Before start started. 
+
+
+===== Assembling started. 
+
+
+===== K21 started. 
+
+
+== Running: /Users/ahuynh/miniforge3/envs/7210_test/bin/spades-core /Users/ahuynh/Downloads/7210_assignment1/asm/spades/A2128696/K21/configs/config.info /Users/ahuynh/Downloads/7210_assignment1/asm/spades/A2128696/K21/configs/isolate_mode.info
+
+  0:00:00.000     1M / 10M   INFO    General                 (main.cpp                  :  99)   Loaded config from /Users/ahuynh/Downloads/7210_assignment1/asm/spades/A2128696/K21/configs/config.info
+  0:00:00.000     1M / 10M   INFO    General                 (main.cpp                  :  99)   Loaded config from /Users/ahuynh/Downloads/7210_assignment1/asm/spades/A2128696/K21/configs/isolate_mode.info
+  0:00:00.000     1M / 10M   ERROR   General                 (memory_limit.cpp          :  47)   setrlimit(2) call failed, errno = 22
+
+
+== Error ==  system call for: "['/Users/ahuynh/miniforge3/envs/7210_test/bin/spades-core', '/Users/ahuynh/Downloads/7210_assignment1/asm/spades/A2128696/K21/configs/config.info', '/Users/ahuynh/Downloads/7210_assignment1/asm/spades/A2128696/K21/configs/isolate_mode.info']" finished abnormally, OS return value: 22
+
+In case you have troubles running SPAdes, you can write to spades.support@cab.spbu.ru
+or report an issue on our GitHub repository github.com/ablab/spades
+Please provide us with params.txt and spades.log files from the output directory.
+
+SPAdes log can be found here: /Users/ahuynh/Downloads/7210_assignment1/asm/spades/A2128696/spades.log
+
+Thank you for using SPAdes!
